@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$']],
+    processEscapes: true
+  }
+});
+</script>
+<style>
+body {
+  margin-top: 100px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  margin-left: 200px;
+}
+p {
+  border: 1px solid grey;
+  padding: 10px;
+  text-align: justify;
+}
+p.obs {
+  color: blue;
+}
+p.sol {
+  color: green;
+}
+</style>
+</head>
+
+<body>
+
+<h1>UNITAT 2. INEQUACIONS DE PRIMER GRAU.</h1>
+
+<h3>2.1. Desigualtats.</h3>
+
+<p>Per comparar els nombres entre ells, establim quatre nous símbols de
+comparació: $<$ (més petit que), $>$ (més gran que), $\leq$ (més petit o igual
+que), $\geq$ (més gran o igual que).
+\begin{align*}
+a< b\quad &\Leftrightarrow\quad a-b\quad \text{negatiu},\\
+a>b\quad &\Leftrightarrow\quad a-b\quad \text{positiu},\\
+a\leq b\quad &\Leftrightarrow\quad a-b\quad \text{negatiu o}\ 0,\\
+a\geq b\quad &\Leftrightarrow\quad a-b\quad \text{positiu o}\ 0.
+\end{align*}
+Per exemple, $2<5$, $3>-4$, $1\leq1$ i $0\geq-6$ són expressions certes, mentre
+que $7<7$, $9>10$, $-3\leq-5$ i $12\geq20$ són falses.
+</p>
+
+<p class="obs"><i>Observació 1. Nombres positius i negatius.</i>
+Per estalviar paraules, no cal escriure quelcom de l'estil "$a$ és positiu", sinó
+que n'hi ha prou escrivint $a>0$. El mateix si $b$ és negatiu: $b<0$.
+</p>
+
+<h3>2.2. Propietats de les desigualtats.</h3>
+
+<p>És molt important recordar aquestes propietats.
+\begin{align*}
+a>b\quad &\Leftrightarrow\quad a+c>b+c\quad \text{per qualsevol valor de}\ c,\\
+a>b\quad &\Leftrightarrow\quad ac>bc\quad \text{per qualsevol valor de}\ c>0,\\
+a>b\quad &\Leftrightarrow\quad ac< bc\quad \text{per qualsevol valor de}\ c<0.
+\end{align*}
+Aquestes propietats també es compleixen per $a< b$, $a\geq b$, $a\leq b$: en les
+dues primeres es conserva el sentit de la desigualtat i en la tercera, no.
+</p>
+
+<p><b>Exercici 1.</b> Demostra les tres propietats de les desigualtats.</p>
+<p class="sol" id="e1" style="display: none">
+Si $a>b$, $a-b$ és positiu. Aleshores $(a+c)-(b+c)$ també és positiu. Trivial. Les
+altres propietats també són trivials de demostrar.
+</p>
+<button onclick="xou('e1')">Solució.</button>
+
+<p><b>Exercici 2.</b> Demostra que si $a>0$, aleshores $1/a>0$.</p>
+<p class="sol" id="e2" style="display: none">
+Tenim per hipòtesi que $a>0$. Suposem $1/a<0$. Apliquem la tercera propietat i
+obtenim
+\[
+a>0 \quad\Leftrightarrow \quad a\frac{1}{a}<0; \quad 1<0,
+\]
+que és fals. Per tant, cal que $1/a>0$.
+</p>
+<button onclick="xou('e2')">Solució.</button>
+
+<p class="obs"><i>Observació 2. Relació de desigualtat entre els inversos de dos
+nombres.</i>
+És interessant adonar-se del fet que
+\begin{align*}
+a< b<0\quad &\Leftrightarrow\quad \frac{1}{a}>\frac{1}{b},\\
+a<0< b\quad &\Leftrightarrow\quad \frac{1}{a}<\frac{1}{b},\\
+0< a< b\quad &\Leftrightarrow\quad \frac{1}{a}>\frac{1}{b}.
+\end{align*}
+</p>
+
+<p><b>Exercici 3.</b> Demostra les propietats de l'observació anterior.</p>
+<p class="sol" id="e3" style="display: none">
+Fent servir les propietats de les desigualtats. Si $a< b<0$, aleshores $ab>0$.
+Apliquem la segona propietat amb $c=1/(ab)$, així:
+\[
+a< b \quad\Leftrightarrow \quad ac< bc.
+\]
+Les altres propietats es demostren de manera semblant.
+</p>
+<button onclick="xou('e3')">Solució.</button>
+
+<h3>2.3. Inequacions de primer grau amb una incògnita.</h3>
+
+<p>Una inequació és una desigualtat algèbrica. Per exemple: $3-x>2$. Si apliquem
+les propietats de les desigualtats, podem aïllar la incògnita de la desigualtat.
+Seguint amb l'exemple, tenim que podem sumar $x$ i restar $2$ a banda i banda, de
+manera que obtenim $1>x$, és a dir, $x<1$ (és preferible escriure la incògnita a
+la part esquerra de la inequació). Això significa que la solució de la inequació
+són tots els nombres estrictament més petits que $1$, que es pot expressar com
+l'interval $(-\infty,1)$.
+</p>
+
+<p class="obs"><i>Observació 3. Intervals.</i>
+Si no saps com funcionen els intervals, aquí tens un petit resum. Els símbols
+"$($", "$[$" s'utilitzen per obrir un interval i els símbols "$)$", "$]$" per
+tancar-lo. S'utilitzen els símbols "$[$", "$]$" per indicar inclusió. Per exemple,
+$(-3,10]$ és l'interval de nombres que van de $-3$ a $10$ sense pendre el $-3$
+però prenent el $10$. Per tant, tenim que $-2$, $0$, $\phi$, $\pi$, $7$,
+$10\in(-3,10]$, per exemple, però $-4$, $-3$, $11$, $34\notin(-3,10]$.
+<br>
+Nota 1: els símbols "$\in$", "$\notin$" signifiquen "pertany", "no pertany",
+respectivament.
+<br>
+Nota 2: per conveni, si un dels elements de l'interval és un infinit, es prenen
+els símbols "$($", "$)$" ja que l'infinit no es pot incloure en un conjunt. Per
+exemple, la solució de $x\geq1$ és l'interval $[1,\infty)$, i la de $x<-12$ és
+$(-\infty,-12)$.
+</p>
+
+<p><b>Exercici 4.</b> Resol les inequacions.
+\[
+(a)\quad \frac{2x+1}{4} \leq \frac{x+2}{3}-x,\qquad
+(b)\quad x < 5(x-5)+7+2x.
+\]
+</p>
+<p class="sol" id="e4" style="display: none">
+$(a)$ $x \geq \frac{5}{14},$ o bé $x \in [\frac{5}{14},\infty)$,
+$\quad(b)$ $x > 3,$ o bé $x \in (3,\infty)$.
+</p>
+<button onclick="xou('e4')">Solució.</button>
+
+<p><b>Exercici 5.</b> L'altura d'un rectangle mesura $64$ mm. Quina ha de ser la
+longitud de la base perquè l'àrea del rectangle no superi els $2624$ mm$^2$?
+</p>
+<p class="sol" id="e5" style="display: none">
+Una longitud no pot ser negativa i, en aquest cas, si és $0$ deixa d'haver-hi
+rectangle. Per tant, la solució del problema és a l'interval $(0,41]$, en
+mil·límetres.
+<br>
+Si $b$ és la longitud de la base del rectangle en mil·límetres, també podem
+expressar la solució com $0 < b \leq 41$.
+</p>
+<button onclick="xou('e5')">Solució.</button>
+
+<h3>2.4. Sistemes d'inequacions de primer grau amb una incògnita.</h3>
+
+<p>Un sistema d'inequacions són un conjunt de desigualtats que s'han de complir
+alhora. Per exemple:
+\[
+\begin{cases}
+3-x > 2,\\
+x \geq 0.
+\end{cases}
+\]
+Abans hem vist que $3-x > 2$ equival a $x < 1$, per tant, la solució del sistema
+és $x < 1$ i $x \geq 0$, és a dir, $0 \leq x < 1$. També podem dir que la solució
+es troba a l'interval $[0,1)$.
+</p>
+
+<p><b>Exercici 6.</b> Resol el sistema d'inequacions.
+\[
+\begin{cases}
+x+5 < 3(x+4)-1,\\
+\frac{5}{2}x \leq \frac{x-1}{3}+9.
+\end{cases}
+\]
+</p>
+<p class="sol" id="e6" style="display: none">
+$-3 < x \leq 4$, o bé $x \in (-3,4]$.
+</p>
+<button onclick="xou('e6')">Solució.</button>
+
+<script>
+function xou(id){
+  var x = document.getElementById(id).style.display;
+  if (x == 'none') {
+    document.getElementById(id).style.display = 'block';
+  } else {
+    document.getElementById(id).style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
